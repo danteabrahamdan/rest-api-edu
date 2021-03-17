@@ -8,5 +8,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 dbConnection();
+app.use(express.static('public'));
 app.use('/api/usuarios', require('./routes/usuarios-routes'));
+app.use('/api/login', require('./routes/auth-routes'));
 app.listen(process.env.PORT, () => console.log(`Servidor en el puerto ${process.env.PORT}`));
