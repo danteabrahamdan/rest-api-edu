@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="google-signin-client_id" content="452176620855-0nu4nbgovcrcakn3l8q7mm203tdqpauu.apps.googleusercontent.com">
+  <meta name="google-signin-client_id" content="452176620855-nbt0mm9u0k7759ftq1v918or3a8gcj05.apps.googleusercontent.com">
   <title>Google Sign in</title>
 </head>
 <body>
@@ -15,7 +15,7 @@
 
   <a href="#" onclick="signOut()">Sign Out</a>
 
-  <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
   <script>
     function onSignIn(googleUser) {
       var profile = googleUser.getBasicProfile();
@@ -25,6 +25,7 @@
       console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
 
       var id_token = googleUser.getAuthResponse().id_token;
+      
       console.log(id_token);
     }
 
